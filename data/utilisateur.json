@@ -1,0 +1,26 @@
+[
+    {
+        "prenom": "Abass",
+        "nom": "Dieme",
+        "login": "admin",
+        "password": "admin",
+        "profil": "admin",
+        "photo": "admin.jpg"
+    },
+    {
+        "prenom": "joueur",
+        "nom": "joueur",
+        "login": "joueur",
+        "password": "joueur",
+        "profil": "joueur",
+        "photo": "joueur.jpg"
+    },
+    {
+        "prenom": "fghjk",
+        "nom": "fghjn",
+        "login": "ghj",
+        "password": "fghj",
+        "profil": "joueur",
+        "photo": "joueur.jpg"
+    }
+]

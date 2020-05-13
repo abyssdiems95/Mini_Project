@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../public/css/Exojs.css">
+<title> JS  Code</title>
+    </head>
+
+<body>
+<h1>Hello</h1>                          
+<p>Saisissez Votre numéro</p>
+<form method="POST">
+    <div id="inputs">
+        <div class="row" id="row_0">
+<input type="text" class="Champ">
+<button type="button" class="btn btn-green" onclick="onAddInput()">+</button><br><br>
+</div>
+
+ 
+
+
+    </div>
+
+</form>
+
+<script>
+    var nbrRow = 0;
+function onAddInput(){
+    nbrRow++;
+var divInputs = document.getElementById('inputs');
+var newInput = document.createElement('div');
+newInput.setAttribute('class','row');
+newInput.setAttribute('id','row_'+nbrRow);
+newInput.innerHTML =`  <input type="text" class="Champ">
+    <button type="button" class="btn btn-red" onclick="onDeleteInput(${nbrRow})">X</button>`;
+divInputs.appendChild(newInput);
+}
+
+function onDeleteInput(n) {
+    var target = document.getElementById('row_'+n);
+    
+     setTimeout(function () {
+        target.remove();
+     },700)
+
+     fadeOut('row_'+n);
+
+}
+
+function fadeOut(idTarget){
+    var target= document.getElementById('idTarget')
+    var effect= setInterval(function(){
+        if(!target.style.opacity){
+            target.style.opacity= 1;
+        }
+        if(target.style.opacity>0){
+            target.style.opacity-=0.1;
+        }else{
+            clearInterval(effect);
+        }
+    },200)
+}
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
